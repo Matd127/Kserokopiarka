@@ -1,4 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
+using System.IO;
+using Zadanie1;
 
 namespace Zadanie1UnitTests
 {

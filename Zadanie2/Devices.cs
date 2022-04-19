@@ -57,6 +57,6 @@ namespace Zadanie2
     public interface IFax : IDevice
     {
         void Recieve(in IDocument document);
-        void Send(out IDocument document);
+        void Send();
     }
 }

@@ -9,7 +9,7 @@ using Zadanie3;
 namespace Zadanie3UnitTest
 {
     [TestClass]
-    public class CopiertTest
+    public class CopierTest
     {
         [TestMethod]
         public void Copier_GetState_StateOff()

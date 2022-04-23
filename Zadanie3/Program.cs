@@ -16,8 +16,8 @@ namespace Zadanie3
 
             xerox.ScanAndPrint();
             System.Console.WriteLine(xerox.Counter);
-            System.Console.WriteLine(xerox.PrintCounter);
-            System.Console.WriteLine(xerox.ScanCounter);
+            System.Console.WriteLine(xerox.printer.Counter);
+            System.Console.WriteLine(xerox.scanner.Counter);
 
             var multifunctionalDevice = new MultidimensionalDevice();
             multifunctionalDevice.PowerOn();

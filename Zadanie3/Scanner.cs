@@ -23,7 +23,7 @@ namespace Zadanie3
                 state = IDevice.State.on;
         }
 
-        public void Scan(out IDocument document, IDocument.FormatType formatType)
+        public void Scan(out IDocument document, IDocument.FormatType formatType = IDocument.FormatType.JPG)
         {
             document = new PDFDocument(filename: null);
             if (state == IDevice.State.off) return;

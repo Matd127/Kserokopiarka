@@ -47,7 +47,7 @@ namespace Zadanie3UnitTest
         }
 
         [TestMethod]
-        public void Copier_Print_DeviceOff()
+        public void Printer_Print_DeviceOff()
         {
             var printer = new Printer();
             printer.PowerOff();
@@ -61,6 +61,26 @@ namespace Zadanie3UnitTest
                 Assert.IsFalse(consoleOutput.GetOutput().Contains("Print"));
             }
             Assert.AreEqual(currentConsoleOut, Console.Out);
+        }
+
+        [TestMethod]
+        public void Printer_PrintCounter()
+        {
+            var printer = new Printer();
+            printer.PowerOn();
+
+            IDocument doc1 = new PDFDocument("aaa.pdf");
+            printer.Print(in doc1);
+            IDocument doc2 = new TextDocument("aaa.txt");
+            printer.Print(in doc2);
+            IDocument doc3 = new ImageDocument("aaa.jpg");
+            printer.Print(in doc3);
+
+            printer.PowerOff();
+            printer.Print(in doc3);
+
+            printer.PowerOn();
+            Assert.AreEqual(3, printer.Counter);
         }
     }
 }
